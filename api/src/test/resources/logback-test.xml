@@ -1,0 +1,8 @@
+<configuration>
+  <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder><pattern>%level %logger{24} - %msg%n</pattern></encoder>
+  </appender>
+  <!-- HTTP DEBUG logs include credentials and tokens. Keep them off. -->
+  <logger name="com.intuit.karate" level="WARN"/>
+  <root level="WARN"><appender-ref ref="CONSOLE"/></root>
+</configuration>
